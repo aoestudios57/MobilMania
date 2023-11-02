@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobil Mania - Handy Reparatur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .navbar img {
+            max-width: 60px;
+            height: auto;
+        }
+
+        .navbar h1 {
+            margin: 0;
+        }
+
+        .menu-button {
+            display: none;
+            cursor: pointer;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar li {
+            margin-right: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .contact {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .contact h2 {
+            margin-top: 0;
+        }
+
+        .services {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 10px;
+            flex: 1;
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-wrap: wrap;
+                align-items: center;
+                padding-bottom: 30px;
+            }
+
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .navbar li {
+                margin: 10px 0;
+            }
+
+            .navbar a {
+                font-size: 18px;
+            }
+
+            .menu-button {
+                display: block;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            .menu-open {
+                display: block;
+            }
+
+            .services {
+                flex-direction: column;
+            }
+
+            .service {
+                margin: 10px 0;
+            }
+
+            .content, .contact {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+        }
+
+        @media screen and (min-width: 769px) {
+            .navbar ul {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="logo.jpg" alt="Mobil Mania Logo">
+        <h1>Mobil Mania</h1>
+        <div class="menu-button">&#9776;</div>
+        <ul class="menu-open">
+            <li><a href="#startseite">Startseite</a></li>
+            <li><a href="#dienstleistungen">Dienstleistungen</a></li>
+            <li><a href="#ueber-uns">Über Uns</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <div class="container" id="startseite">
+        <div class="content">
+            <img src="bonus.jpg" alt="Handy Reparatur" style="max-width: 100%; height: auto;">
+            <h2>Große Neuigkeiten für unsere Kunden!</h2>
+            <p>Wir freuen uns bekanntzugeben, dass wir in Kürze ein offizieller Partner des Reparaturbonus-Programms werden. Das bedeutet, dass Sie bald bei uns Handy, Laptop oder sonstige Elektronikgeräte Reparaturen mit Reparaturbonus-Bons in Anspruch nehmen können. Wir sind stolz darauf, Teil dieses Programms zu sein und Ihnen zusätzliche Vorteile bieten zu können.</p>
+        </div>
+
+        <div class="contact" id="kontakt">
+            <h2>Kontaktieren Sie uns</h2>
+            <p>Telefon: +43 676 4621142</p>
+        </div>
+
+        <div class="services" id="dienstleistungen">
+            <div class="service">
+                <img src="service1.jpg" alt="Handy Reparatur Service 1" style="max-width: 100%; height: auto;">
+                <h3>Displayreparatur</h3>
+                <p>Wir reparieren beschädigte Smartphone-Displays schnell und zuverlässig. Ihr Display sieht danach aus wie neu!</p>
+            </div>
+            <div class="service">
+                <img src="service2.jpg" alt="Handy Reparatur Service 2" style="max-width: 100%; height: auto;">
+                <h3>Batteriewechsel</h3>
+                <p>Wenn Ihr Akku nicht mehr hält, tauschen wir ihn aus, damit Sie wieder den ganzen Tag telefonieren können.</p>
+            </div>
+            <!-- Weitere Dienstleistungen hier hinzufügen -->
+        </div>
+    </div>
+    <script>
+        document.querySelector(".menu-button").addEventListener("click", function() {
+            const menu = document.querySelector(".menu-open");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
